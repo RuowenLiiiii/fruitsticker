@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiwi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="left-top-corner">
+        <div class="filter-dropdown">
+            <span id="filter-btn">Filter</span>
+            <div id="filter-content" class="filter-content">
+              
+                <div class="filter-item" data-category="color">Color
+                    <span class="toggle-sub-filter">+</span>
+                    <div class="sub-filter" style="display: none;">
+                        <div data-value="Blue">Blue</div>
+                        <div data-value="White">White</div>
+                        <div data-value="Yellow">Yellow</div>
+                        <div data-value="Red">Red</div>
+                        <div data-value="Green">Green</div>
+                        <div data-value="Black">Black</div>
+                    </div>
+                </div>
+                <!-- Fruit Name -->
+                <div class="filter-item" data-category="fruit-name">Fruit Name
+                    <span class="toggle-sub-filter">+</span>
+                    <div class="sub-filter" style="display: none;">
+                        <div data-value="Banana">Banana</div>
+                        <div data-value="Apple">Apple</div>
+                        <div data-value="Mango">Mango</div>
+                        <div data-value="Watermelon">Watermelon</div>
+                        <div data-value="Orange">Orange</div>
+                        <div data-value="Kiwi">Kiwi</div>
+                        <div data-value="Pineapple">Pineapple</div>
+                        <div data-value="Blueberry">Blueberry</div>
+                    </div>
+                </div>
+                <!-- Botanical Classification -->
+                <div class="filter-item" data-category="botanical">Botanical Classification
+                    <span class="toggle-sub-filter">+</span>
+                    <div class="sub-filter" style="display: none;">
+                        <div data-value="Berries">Berries</div>
+                        <div data-value="Pomes">Pomes</div>
+                        <div data-value="Stone Fruits">Stone Fruits</div>
+                        <div data-value="Melons">Melons</div>
+                        <div data-value="Citrus Fruits">Citrus Fruits</div>
+                    </div>
+                </div>
+            
+                <!-- Shape -->
+                <div class="filter-item" data-category="shape">Shape
+                    <span class="toggle-sub-filter">+</span>
+                    <div class="sub-filter" style="display: none;">
+                        <div data-value="Oval">Oval</div>
+                        <div data-value="Circle">Circle</div>
+                        <div data-value="Square">Square</div>
+                        <div data-value="Irregular">Irregular</div>
+                    </div>
+                </div>
+                <!-- Country -->
+                <div class="filter-item" data-category="country">Country
+                    <span class="toggle-sub-filter">+</span>
+                    <div class="sub-filter" style="display: none;">
+                        <div data-value="Ecuador">Ecuador</div>
+                        <div data-value="Australia">Australia</div>
+                        <div data-value="Costa Rica">Costa Rica</div>
+                        <div data-value="China">China</div>
+                        <div data-value="USA">USA</div>
+                        <div data-value="Pakistan">Pakistan</div>
+                        <div data-value="New Zealand">New Zealand</div>
+                        <div data-value="France">France</div>
+                        <div data-value="Turkey">Turkey</div>
+                        <div data-value="Germany">Germany</div>
+                        <div data-value="Panama">Panama</div>
+                        <div data-value="Spain">Spain</div>
+                        <div data-value="Chile">Chile</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <div class="selected-filters">
+    <p>Selected Filters:</p>
+    <ul id="selected-filters-list">
+       
+    </ul>
+</div>
+
+    <div class="container">
+        <div class="left-side">
+            <div class="sticker-grid">
+
+                <img src="pic/1.PNG" alt="Sticker 1" 
+                data-color="White" 
+                data-fruit-name="Banana" 
+                data-botanical-classification="Berries" 
+                data-shape="Oval" 
+                data-company="Dole"
+                data-country="Ecuador" id="sticker1" draggable="true">
+
+        <img src="pic/2.PNG" alt="Sticker 2" id="sticker2" 
+                data-color="White" 
+                data-fruit-name="Banana" 
+                data-botanical-classification="Berries" 
+                data-shape="Oval" 
+                data-company="VARSU"
+                data-country="Ecuador"
+                draggable="true">
+
+                
+        <img src="pic/3.PNG" alt="Sticker 3" id="sticker3" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Germany"
+        draggable="true">
+
+        <img src="pic/4.PNG" alt="Sticker 4" 
+        data-color="Blue" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="LadyFingers"
+        data-country="Australia"
+        id="sticker4" draggable="true">
+
+
+        <img src="pic/5.PNG" alt="Sticker 5" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="DelMonte"
+        data-country="Costa Rica"
+        id="sticker5" draggable="true">
+
+        <img src="pic/6.PNG" alt="Sticker 6" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Ecuador"
+        id="sticker6" draggable="true">
+
+
+        <img src="pic/7.PNG" alt="Sticker 7" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Ecuador"
+        id="sticker7" draggable="true">
+        
+        <img src="pic/8.PNG" alt="Sticker 8" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Circle"
+        id="sticker8" draggable="true">
+
+
+        <img src="pic/9.PNG" alt="Sticker 9"
+        data-color="Yellow" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Ecuador"
+        id="sticker9" draggable="true">
+        
+        <img src="pic/10.PNG" alt="Sticker 10" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Ecuador"
+        id="sticker10" draggable="true">
+
+        <img src="pic/11.PNG" alt="Sticker 11" 
+        data-color="Red" 
+        data-fruit-name="Mango" 
+        data-botanical-classification="Stone Fruits" 
+        data-shape="Irregular" 
+        data-company="RYKMangoes"
+        data-country="Pakistan"
+        id="sticker11" draggable="true">
+
+        <img src="pic/12.PNG" alt="Sticker 12" 
+        data-color="Blue" 
+        data-fruit-name="Watermelon" 
+        data-botanical-classification="Melons" 
+        data-shape="Oval" 
+        data-company="SuperLux"
+        data-country="Iran"
+        id="sticker12" draggable="true">
+
+
+        <img src="pic/13.PNG" alt="Sticker 13" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Circle" 
+        data-company="Enza"
+        data-country="New Zealand"
+        id="sticker13" draggable="true">
+
+
+        <img src="pic/14.PNG" alt="Sticker 14" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Circle" 
+        data-company="Enza"
+        data-country="New Zealand"
+        id="sticker14" draggable="true">
+
+        <img src="pic/15.PNG" alt="Sticker 15" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Circle" 
+        data-company="Enza"
+        data-country="New Zealand"
+        id="sticker15" draggable="true">
+
+        <img src="pic/16.PNG" alt="Sticker 16" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Circle" 
+        data-company="Enza"
+        data-country="New Zealand"
+        id="sticker16" draggable="true">
+
+        <img src="pic/17.PNG" alt="Sticker 19" 
+        data-color="Blue" 
+        data-fruit-name="Melon" 
+        data-botanical-classification="Melons" 
+        data-shape="Irregular" 
+        data-company="Le Beffroi        "
+        data-country="France"
+        id="sticker17" draggable="true">
+
+        <img src="pic/18.PNG" alt="Sticker 17"
+        data-color="Yellow" 
+        data-fruit-name="Mango" 
+        data-botanical-classification="Stone Fruits" 
+        data-shape="Oval" 
+        data-company="GOLDEN MANGO        "
+        data-country="Ecuador"
+        id="sticker18" draggable="true">
+
+        <img src="pic/19.PNG" alt="Sticker 18" 
+        data-color="Green" 
+        data-fruit-name="Mango" 
+        data-botanical-classification="Stone Fruits" 
+        data-shape="Oval" 
+        data-company="GOLDEN MANGO        "
+        data-country="Ecuador"
+        id="sticker19" draggable="true">
+
+
+        <img src="pic/20.PNG" alt="Sticker 20" 
+        data-color="White" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="JAPIENOU"
+        data-country="France"
+        id="sticker20" draggable="true">
+
+        <img src="pic/21.PNG" alt="Sticker 21" 
+        data-color="Blue" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Oval" 
+        data-company="五星牌"
+        data-country="China"
+        id="sticker21" draggable="true">
+
+
+        <img src="pic/22.PNG" alt="Sticker 22"
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Oval" 
+        data-company="五星牌"
+        data-country="China"
+        id="sticker22" draggable="true">
+
+        <img src="pic/23.PNG" alt="Sticker 23" 
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="DULCE 1 (One)"
+        data-country="Costa Rica"
+        id="sticker23" draggable="true">
+
+
+        <img src="pic/24.PNG" alt="Sticker 24" 
+        data-color="Blue" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="Tropical Sweet"
+        data-country="Costa Rica"
+        id="sticker24" draggable="true">
+
+
+        <img src="pic/25.PNG" alt="Sticker 25"
+        data-color="Yellow" 
+        data-fruit-name="Mango" 
+        data-botanical-classification="Stone Fruits" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker25" draggable="true">
+
+
+        <img src="pic/26.PNG" alt="Sticker 26"
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker26" draggable="true">
+
+
+        <img src="pic/27.PNG" alt="Sticker 27" 
+        data-color="Yellow" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker27" draggable="true">
+
+
+        <img src="pic/28.PNG" alt="Sticker 28" 
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker28" draggable="true">
+
+
+        <img src="pic/29.PNG" alt="Sticker 29" 
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker29" draggable="true">
+
+        <img src="pic/30.PNG" alt="Sticker 30" 
+        data-color="Green" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Circle" 
+        data-company="Dole"
+        data-country="USA"
+        id="sticker30" draggable="true">
+
+        <img src="pic/31.PNG" alt="Sticker 31"
+        data-color="White" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Exotic Fruit Inc."
+        data-country="Panama"
+        id="sticker31" draggable="true">
+
+        <img src="pic/32.PNG" alt="Sticker 32" 
+        data-color="Blue" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Oval" 
+        data-company="SERGIO"
+        data-country="Spain"
+        id="sticker32" draggable="true">
+
+        <img src="pic/33.PNG" alt="Sticker 33" 
+        data-color="Blue" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Square" 
+        data-company="Bru Bru"
+        data-country="Spain"
+        id="sticker33" draggable="true">
+
+
+        <img src="pic/34.PNG" alt="Sticker 34" 
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="Dole"
+        data-country="Ecuador"
+        id="sticker34" draggable="true">
+
+        <img src="pic/35.JPG" alt="Sticker 35" 
+        data-color="Blue" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="Tropical Paradise"
+        data-country="Costa Rica"
+        id="sticker35" draggable="true">
+
+        <img src="pic/36.PNG" alt="Sticker 36" 
+        data-color="Yellow" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Irregular" 
+        data-company="Del Monte"
+        data-country="USA"
+        id="sticker36" draggable="true">
+
+        <img src="pic/37.PNG" alt="Sticker 37" 
+        data-color="White" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="DUSAL"
+        data-country="Ecuador"
+        id="sticker37" draggable="true">
+
+        <img src="pic/38.PNG" alt="Sticker 38" 
+        data-color="Green" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="Cabana"
+        data-country="Chile"
+        id="sticker38" draggable="true">
+
+        <img src="pic/39.PNG" alt="Sticker 39" 
+        data-color="Blue" 
+        data-fruit-name="Pineapple" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="SANTA MARIA"
+        data-country="Costa Rica"
+        id="sticker39" draggable="true">
+
+        <img src="pic/40.PNG" alt="Sticker 40" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Linda"
+        data-country="Ecuador"
+        id="sticker40" draggable="true">
+
+        <img src="pic/41.PNG" alt="Sticker 41" 
+        data-color="Green" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="Zespri"
+        data-country="New Zealand"
+        id="sticker41" draggable="true">
+
+        <img src="pic/42.PNG" alt="Sticker 42" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Linda"
+        data-country="Ecuador"
+        id="sticker42" draggable="true">
+
+        <img src="pic/43.PNG" alt="Sticker 43" 
+        data-color="Yellow" 
+        data-fruit-name="Watermelon" 
+        data-botanical-classification="Melons" 
+        data-shape="Oval" 
+        data-company="Johnson Brand"
+        data-country="USA"
+        id="sticker43" draggable="true">
+
+        <img src="pic/44.PNG" alt="Sticker 44" 
+        data-color="White" 
+        data-fruit-name="Apple" 
+        data-botanical-classification="Pomes" 
+        data-shape="Oval" 
+        data-company="Dole"
+        data-country="Germany"
+        id="sticker44" draggable="true">
+
+        <img src="pic/45.PNG" alt="Sticker 45" 
+        data-color="Yellow" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="Zafer"
+        data-country="Turkey"
+        id="sticker45" draggable="true">
+
+        <img src="pic/46.PNG" alt="Sticker 46" 
+        data-color="Black" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Oval" 
+        data-company="The Family Farm"
+        data-country="USA"
+        id="sticker46" draggable="true">
+
+        <img src="pic/47.PNG" alt="Sticker 47" 
+        data-color="Green" 
+        data-fruit-name="BlueBerry" 
+        data-botanical-classification="Berries" 
+        data-shape="Square" 
+        data-company="TOP CROP"
+        data-country="USA"
+        id="sticker47" draggable="true">
+        
+        <img src="pic/48.PNG" alt="Sticker 48" 
+        data-color="Green" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Oval" 
+        data-company="香妃"
+        data-country="China"
+        id="sticker48" draggable="true">
+
+        <img src="pic/49.PNG" alt="Sticker 49" 
+        data-color="Blue" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Oval" 
+        data-company="Kinnow Mandarin"
+        data-country="Pakistan"
+        id="sticker49" draggable="true">
+
+        <img src="pic/50.PNG" alt="Sticker 50" 
+        data-color="Yellow" 
+        data-fruit-name="Kiwi" 
+        data-botanical-classification="Berries" 
+        data-shape="Irregular" 
+        data-company="万人猕"
+        data-country="China"
+        id="sticker50" draggable="true">
+
+        <img src="pic/51.PNG" alt="Sticker 51" 
+        data-color="Red" 
+        data-fruit-name="Mango" 
+        data-botanical-classification="Stone Fruits" 
+        data-shape="Oval" 
+        data-company="小崔水仙芒"
+        data-country="China"
+        id="sticker51" draggable="true">
+
+        <img src="pic/52.PNG" alt="Sticker 52" 
+        data-color="Green" 
+        data-fruit-name="Orange" 
+        data-botanical-classification="Citrus Fruits" 
+        data-shape="Irregular" 
+        data-company="JX"
+        data-country="China"
+        id="sticker52" draggable="true">
+
+        <img src="pic/53.PNG" alt="Sticker 53" 
+        data-color="White" 
+        data-fruit-name="Banana" 
+        data-botanical-classification="Berries" 
+        data-shape="Irregular" 
+        data-company="华伟"
+        data-country="China"
+        id="sticker53" draggable="true">
+
+        <img src="pic/54.PNG" alt="Sticker 54" 
+        data-color="Blue" 
+        data-fruit-name="Watermelon" 
+        data-botanical-classification="Melons" 
+        data-shape="Oval" 
+        data-company="星民"
+        data-country="China"
+        id="sticker54" draggable="true">
+
+
+    </div>
+</div>
+    <div class="right-side">
+        <button id="all-stickers-btn" onclick="window.location.href='page2.html';">All Stickers</button>
+        <button id="all-stickers" onclick="window.location.href='cho.html';">Change Fruits</button>
+        <button id="clear-stickers">Clear Stickers</button>
+        <img src="1/kiwi1.png" alt="Apple" class="apple-image">
+
+
+        <!-- <div class="color-circles">
+            <div class="circle" style="background-color: red;" data-img="1/Apple.png"></div>
+            <div class="circle" style="background-color: orange;" data-img="1/Banana.png"></div> -->
+
+        </div>
+    </div>
+
+</div>
+</div>
+    
+
+</body>
+</html>
+

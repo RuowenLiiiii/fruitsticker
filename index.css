@@ -1,0 +1,371 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000807;
+    font-family: "Ubuntu Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 13px;
+    }
+
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-side {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; 
+    position: relative;
+    background-color: #fbf5f3;
+    width: 50%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px; 
+
+    
+}
+
+.left-side-inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; 
+  padding-top: 10px;
+  margin-bottom: 10px; 
+}
+
+  .right-side {
+    position: relative;
+    background-color: #d7cfb8; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+
+
+
+
+
+
+
+
+  .sticker-grid {
+    position: absolute; 
+    /* top: 20%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 20px;
+    left:20px;
+    width: 100%; 
+    z-index: 2; 
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+.sticker-grid img {
+    width: calc(25% - 30px); 
+    height: auto; 
+    object-fit: cover;
+}
+
+
+
+
+  .filter-dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .filter-content {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: #c4da63;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 100;
+    border-radius: 15px;
+  }
+  
+  .filter-content .filter-item {
+    cursor: pointer;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .left-top-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 5;
+}
+
+.selected-filters {
+    position: absolute;
+    top: -13px;
+    left: 10%; 
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap; 
+    z-index: 10;
+}
+    
+#selected-filters-list {
+  display: flex; 
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px; 
+  
+}
+
+#selected-filters-list span {
+  margin-right: 5px;
+}
+
+#selected-filters-list li {
+  margin-right: 10px;
+}
+
+.filter-content .sub-filter div:hover, .filter-content .sub-filter div.selected {
+    background-color: #f0f0f0; 
+    color: #000;
+}
+  
+.toggle-sub-filter {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sub-filter div {
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
+  .apple-image {
+    width: 70%;
+    height: auto;
+  }
+
+
+
+
+
+  #clear-stickers {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c4da63;
+    color: black;
+    cursor: pointer;
+    z-index: 1000; 
+    
+    font-family:"Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    }
+
+
+    #all-stickers-btn {
+      position: absolute;
+      top: 13px; 
+      right: 15px; 
+      margin: 10px;
+      padding: 5px 10px; 
+      border: none;
+      border-radius: 5px;
+      background-color: #c4da63; 
+      color: black;
+      cursor: pointer;
+
+      font-family:"Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+  
+  }
+  
+  #all-stickers-btn:hover {
+    background-color: #9cae50;
+}
+
+#all-stickers {
+  position: absolute; 
+  top: 13px;
+  left: 15px;
+  margin: 10px;
+  padding: 5px 10px; 
+  border: none;
+  border-radius: 5px;
+  background-color: #c4da63;
+  color: black;
+  cursor: pointer;
+
+  font-family:"Ubuntu Mono", monospace;
+font-weight: 400;
+font-style: normal;
+font-size: 13px;
+
+}
+
+#all-stickers:hover {
+background-color: #9cae50;
+}
+
+  #clear-stickers {
+      margin: 10px; 
+  }
+
+
+#clear-stickers:hover {
+    background-color: #9cae50;
+}
+
+
+
+.right-side {
+  position: relative; 
+
+}
+
+.color-circles {
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  padding: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px 0; 
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 750px) {
+
+  .container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    order: 3;
+  }
+
+  .sticker-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    padding-right: 30px; 
+    padding-left: 0; 
+    box-sizing: border-box;
+    
+  }
+
+  .sticker-grid img {
+    margin: 0px;
+    width: calc(20% - 10px); 
+    height: auto;
+    box-sizing: border-box;
+  }
+  
+  #clear-stickers {
+    position: fixed;
+    bottom: 20px; 
+    left: 75%; 
+    margin: 0; 
+    width: 120px;
+  }
+
+  .filter-and-selected-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+  }
+
+  .selected-filters {
+    order: 1;
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 10px;
+    top:-13px;
+  }
+
+  .filter-dropdown {
+    order: 2;
+  }
+
+  .filter-content {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-10%);
+    width: 80%;
+    max-height: 300px; 
+    overflow-y: auto;
+  }
+
+}
+
